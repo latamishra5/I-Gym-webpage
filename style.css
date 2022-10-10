@@ -1,0 +1,247 @@
+* {
+    --highlight: #363333;
+    --shadow: #E16428;
+    --accent: #F6E9E9;
+    --extra: #272121;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+}
+section#home {
+    height: 100vh;
+    width: 100vw;
+    background: url('../images/quote-2.jpg');
+    /* background-attachment: fixed; */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+header {
+    min-height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgb(225, 100, 40, 0.5);
+    position: sticky;
+    top: 0;
+}
+
+header .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 2.5em;
+    /* color: var(--highlight); */
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0.5em 1.25em;
+    margin: auto 0.5em;
+    border: 1px solid var(--accent);
+    border-radius: 1em;
+    transition: all .5s;
+}
+
+nav ul li:hover {
+    background: var(--shadow);
+}
+
+nav ul li a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+
+.join-now-section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+}
+
+#first-line {
+    color: var(--shadow);
+    font-size: 2em;
+    text-shadow: 1px 1px 2px var(--accent);
+}
+#second-line {
+    color: var(--accent);
+    font-size: 3em;
+    text-shadow: 2px 2px 3px var(--shadow);
+}
+
+.join-now-section > button {
+    padding: 0.5em 1em;
+    align-self: flex-end;
+    background: transparent;
+    border: 1px solid var(--accent);
+    border-radius: 1em;
+}
+
+.join-now-section a {
+    color: var(--shadow);
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+#about {
+    padding: 2em 1em;
+    background: var(--highlight);
+    /* min-height: 100vh; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2fr 1fr;
+    gap: 25px;
+    position: relative;
+    align-items: flex-end;
+}
+
+.image img {
+    height: 50%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#about p {
+    text-align: justify;
+    letter-spacing: 1px;
+    font-size: 1.25em;
+    color: var(--accent);
+    word-spacing: 5px;
+    font-size: 1.1em;
+    max-height: 100%;
+    align-self: center;
+}
+
+.no-text {
+    color: var(--accent);
+    font-size: 1.1em;
+    text-align: center;
+    word-spacing: 5px;
+    letter-spacing: 1px;
+    grid-column: 1 / span 2;
+}
+section#quote {
+    background: url('../images/quote-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+section#quote::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--shadow);
+    opacity: 0.4;
+}
+
+#quote .quote-text {
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0px 0px 5px var(--highlight);
+}
+
+#quote #line1 {
+    font-size: 3em;
+    color: var(--accent);
+    z-index: 99;
+}
+#quote #line2 {
+    z-index: 99;
+    font-size: 2.5em;
+    color: var(--highlight);
+}
+
+section#services {
+    background: var(--highlight);
+}
+
+.service-gallery {
+    display: flex;
+    justify-content: space-around;
+}
+
+h1.hfy {
+    background-color: var(--highlight);
+    text-align: center;
+    font-size: 3.5em;
+    color: var(--accent);
+    padding-bottom: 1em;
+}
+
+#services .services {
+    position: relative;
+    transition: all 100ms;
+}
+
+#services .services:hover {
+    transform: scale(1.1);
+}
+
+#services p {
+    background: var(--shadow);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.another-gallery {
+    width: 60%;
+    margin: 1em auto;
+}
+
+.another-gallery > div {
+    display: flex;
+    border: 1px solid var(--accent);
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+    background-color: var(--shadow);
+    border-radius: 3em;
+}
+
+.another-gallery > div .icon {
+    display: flex;
+}
+
+.another-gallery i {
+    width: 60px;
+    height: 60px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    color: var(--shadow);
+    text-align: center;
+    font-size: 2em;
+    line-height: 60px;
+}
+
+.another-gallery h3 {
+    color: var(--accent);
+    letter-spacing: 1.5px;
+}
